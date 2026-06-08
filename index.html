@@ -391,6 +391,19 @@
     opacity: 0.7;
   }
 
+  /* ===== GOOGLE MAPS IFRAMES ===== */
+  .place-img-wrap iframe.place-img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    display: block;
+    border: 0;
+  }
+  /* Hide placeholder when iframe is present */
+  .place-img-wrap iframe + .place-img-placeholder {
+    display: none !important;
+  }
+
   /* ===== PLACE CARDS ===== */
   .place-card {
     display: grid;
@@ -844,9 +857,7 @@
     <!-- VEG 1 -->
     <div class="card">
       <span class="card-badge">Pure Veg</span>
-      <img class="card-img-real" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/1280px-A_small_cup_of_coffee.JPG"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-        alt="Hotel Tamil Nadu" style="display:none">
+      
       <div class="card-img-placeholder" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9)">🌿</div>
       <div class="card-body">
         <h3 class="card-name">Hotel Tamil Nadu (TTDC)</h3>
@@ -1179,9 +1190,10 @@
   <!-- Ramanathaswamy Temple -->
   <div class="place-card">
     <div class="place-img-wrap">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Ramanathaswamy_Temple_Corridor.jpg/1280px-Ramanathaswamy_Temple_Corridor.jpg"
-           alt="Ramanathaswamy Temple" class="place-img"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <iframe
+           src="https://maps.google.com/maps?q=Ramanathaswamy+Temple+Rameswaram+Tamil+Nadu&t=&z=15&ie=UTF8&iwloc=&output=embed"
+           class="place-img" style="border:0;" allowfullscreen="" loading="lazy"
+           referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="place-img-placeholder" style="display:none;">🛕</div>
       <span class="place-category-ribbon">Jyotirlinga · Char Dham</span>
     </div>
@@ -1205,9 +1217,10 @@
   <!-- Uthirakosamangai -->
   <div class="place-card reverse">
     <div class="place-img-wrap">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Uthirakosamangai_temple.jpg/800px-Uthirakosamangai_temple.jpg"
-           alt="Uthirakosamangai Temple" class="place-img"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <iframe
+           src="https://maps.google.com/maps?q=Uthirakosamangai+Temple+Ramanathapuram&t=&z=15&ie=UTF8&iwloc=&output=embed"
+           class="place-img" style="border:0;" allowfullscreen="" loading="lazy"
+           referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#1b5e20,#388e3c)">🛕</div>
       <span class="place-category-ribbon">Ancient · Emerald Deity</span>
     </div>
@@ -1231,9 +1244,10 @@
   <!-- Devipattinam Navagraha Temple -->
   <div class="place-card">
     <div class="place-img-wrap">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Navapashanam_Stones_in_the_Sea%2C_Devipattinam%2C_Tamil_Nadu.jpg/1280px-Navapashanam_Stones_in_the_Sea%2C_Devipattinam%2C_Tamil_Nadu.jpg"
-           alt="Devipattinam Navagraha stones in sea" class="place-img"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <iframe
+           src="https://maps.google.com/maps?q=Devipattinam+Navagraha+Temple+Tamil+Nadu&t=&z=15&ie=UTF8&iwloc=&output=embed"
+           class="place-img" style="border:0;" allowfullscreen="" loading="lazy"
+           referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#01579b,#0288d1)">🌊</div>
       <span class="place-category-ribbon">Navagraha · Coastal Temple</span>
     </div>
@@ -1257,9 +1271,10 @@
   <!-- Thiruppullani -->
   <div class="place-card reverse">
     <div class="place-img-wrap">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Thiruppullani_Temple.jpg/800px-Thiruppullani_Temple.jpg"
-           alt="Thiruppullani Temple" class="place-img"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <iframe
+           src="https://maps.google.com/maps?q=Thiruppullani+Temple+Ramanathapuram&t=&z=15&ie=UTF8&iwloc=&output=embed"
+           class="place-img" style="border:0;" allowfullscreen="" loading="lazy"
+           referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#880e4f,#c2185b)">🌺</div>
       <span class="place-category-ribbon">Vishnu Temple · Ramayana</span>
     </div>
@@ -1293,9 +1308,10 @@
   <!-- Palace -->
   <div class="place-card">
     <div class="place-img-wrap">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Ramalingavilasam_palace.jpg/1280px-Ramalingavilasam_palace.jpg"
-           alt="Ramalingavilasam Palace" class="place-img"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <iframe
+           src="https://maps.google.com/maps?q=Ramalingavilasam+Palace+Ramanathapuram&t=&z=15&ie=UTF8&iwloc=&output=embed"
+           class="place-img" style="border:0;" allowfullscreen="" loading="lazy"
+           referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="place-img-placeholder" style="display:none;">🏛</div>
       <span class="place-category-ribbon">Palace · Museum</span>
     </div>
@@ -1320,9 +1336,10 @@
   <!-- Pamban Bridge -->
   <div class="place-card reverse">
     <div class="place-img-wrap">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Pamban_bridge.jpg/1280px-Pamban_bridge.jpg"
-           alt="Pamban Bridge" class="place-img"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <iframe
+           src="https://maps.google.com/maps?q=Pamban+Bridge+Rameswaram+Tamil+Nadu&t=&z=15&ie=UTF8&iwloc=&output=embed"
+           class="place-img" style="border:0;" allowfullscreen="" loading="lazy"
+           referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="place-img-placeholder" style="display:none;">🌉</div>
       <span class="place-category-ribbon">Engineering Marvel</span>
     </div>
@@ -1346,9 +1363,10 @@
   <!-- APJ Abdul Kalam Memorial -->
   <div class="place-card">
     <div class="place-img-wrap">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/APJ_Abdul_Kalam_Memorial_Rameswaram.jpg/1280px-APJ_Abdul_Kalam_Memorial_Rameswaram.jpg"
-           alt="APJ Abdul Kalam Memorial" class="place-img"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <iframe
+           src="https://maps.google.com/maps?q=APJ+Abdul+Kalam+Memorial+Rameswaram&t=&z=15&ie=UTF8&iwloc=&output=embed"
+           class="place-img" style="border:0;" allowfullscreen="" loading="lazy"
+           referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#263238,#37474f)">🚀</div>
       <span class="place-category-ribbon">Memorial · National Icon</span>
     </div>
@@ -1373,9 +1391,10 @@
   <!-- Dhanushkodi Ruins -->
   <div class="place-card reverse">
     <div class="place-img-wrap">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Dhanushkodi_Town.jpg/1280px-Dhanushkodi_Town.jpg"
-           alt="Dhanushkodi ghost town ruins" class="place-img"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <iframe
+           src="https://maps.google.com/maps?q=Dhanushkodi+Ghost+Town+Rameswaram&t=&z=15&ie=UTF8&iwloc=&output=embed"
+           class="place-img" style="border:0;" allowfullscreen="" loading="lazy"
+           referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="place-img-placeholder" style="display:none;">🏚</div>
       <span class="place-category-ribbon">Ghost Town · Historical</span>
     </div>
@@ -1409,9 +1428,10 @@
   <!-- Ariyaman Beach -->
   <div class="place-card">
     <div class="place-img-wrap">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Ariyaman_beach.jpg/1280px-Ariyaman_beach.jpg"
-           alt="Ariyaman Beach" class="place-img"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <iframe
+           src="https://maps.google.com/maps?q=Ariyaman+Beach+Ramanathapuram&t=&z=15&ie=UTF8&iwloc=&output=embed"
+           class="place-img" style="border:0;" allowfullscreen="" loading="lazy"
+           referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="place-img-placeholder" style="display:none;">🏖</div>
       <span class="place-category-ribbon">Government Beach · Water Sports</span>
     </div>
@@ -1436,9 +1456,10 @@
   <!-- Agni Theertham -->
   <div class="place-card reverse">
     <div class="place-img-wrap">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Agni_Theertham_Rameswaram.jpg/1280px-Agni_Theertham_Rameswaram.jpg"
-           alt="Agni Theertham Rameswaram" class="place-img"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <iframe
+           src="https://maps.google.com/maps?q=Agni+Theertham+Rameswaram&t=&z=15&ie=UTF8&iwloc=&output=embed"
+           class="place-img" style="border:0;" allowfullscreen="" loading="lazy"
+           referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#e65100,#ff8f00)">🌅</div>
       <span class="place-category-ribbon">Sacred Beach · Pilgrimage</span>
     </div>
@@ -1462,9 +1483,10 @@
   <!-- Kunthukal Beach (Hidden) -->
   <div class="place-card">
     <div class="place-img-wrap">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Kunthukal_Beach_Rameswaram.jpg/1280px-Kunthukal_Beach_Rameswaram.jpg"
-           alt="Kunthukal Beach" class="place-img"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <iframe
+           src="https://maps.google.com/maps?q=Kunthukal+Beach+Rameswaram&t=&z=15&ie=UTF8&iwloc=&output=embed"
+           class="place-img" style="border:0;" allowfullscreen="" loading="lazy"
+           referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#004d40,#00695c)">🌴</div>
       <span class="place-category-ribbon">Hidden Beach · Serene</span>
     </div>
@@ -1488,9 +1510,10 @@
   <!-- Olaikuda Beach (Hidden) -->
   <div class="place-card reverse">
     <div class="place-img-wrap">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Rameswaram_beach.jpg/1280px-Rameswaram_beach.jpg"
-           alt="Olaikuda Beach Rameswaram" class="place-img"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <iframe
+           src="https://maps.google.com/maps?q=Rameswaram+Beach+Tamil+Nadu&t=&z=15&ie=UTF8&iwloc=&output=embed"
+           class="place-img" style="border:0;" allowfullscreen="" loading="lazy"
+           referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#006064,#00838f)">🐚</div>
       <span class="place-category-ribbon">Hidden · Untouched</span>
     </div>
@@ -1514,9 +1537,10 @@
   <!-- Pamban Beach -->
   <div class="place-card">
     <div class="place-img-wrap">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Pamban_Bridge_view_from_below.jpg/1280px-Pamban_Bridge_view_from_below.jpg"
-           alt="Pamban Beach and Bridge" class="place-img"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <iframe
+           src="https://maps.google.com/maps?q=Pamban+Beach+Rameswaram+Bridge&t=&z=15&ie=UTF8&iwloc=&output=embed"
+           class="place-img" style="border:0;" allowfullscreen="" loading="lazy"
+           referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#1a237e,#1565c0)">🌉</div>
       <span class="place-category-ribbon">Scenic · Photography</span>
     </div>
@@ -1550,9 +1574,10 @@
   <!-- Chitrangudi Bird Sanctuary -->
   <div class="place-card">
     <div class="place-img-wrap">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Spot-billed_Pelican_%28Pelecanus_philippensis%29_in_Ramanathapuram_District_W_IMG_9031.jpg/1280px-Spot-billed_Pelican_%28Pelecanus_philippensis%29_in_Ramanathapuram_District_W_IMG_9031.jpg"
-           alt="Spot-billed Pelican Chitrangudi" class="place-img"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <iframe
+           src="https://maps.google.com/maps?q=Chitrangudi+Bird+Sanctuary+Ramanathapuram&t=&z=15&ie=UTF8&iwloc=&output=embed"
+           class="place-img" style="border:0;" allowfullscreen="" loading="lazy"
+           referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#1b5e20,#2e7d32)">🦩</div>
       <span class="place-category-ribbon">Ramsar Site · Bird Sanctuary</span>
     </div>
@@ -1577,9 +1602,10 @@
   <!-- Karangadu Mangrove Forest -->
   <div class="place-card reverse">
     <div class="place-img-wrap">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Mangrove_forest.jpg/1280px-Mangrove_forest.jpg"
-           alt="Mangrove Forest" class="place-img"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <iframe
+           src="https://maps.google.com/maps?q=Karangadu+Mangrove+Forest+Ramanathapuram&t=&z=15&ie=UTF8&iwloc=&output=embed"
+           class="place-img" style="border:0;" allowfullscreen="" loading="lazy"
+           referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#004d40,#00695c)">🌿</div>
       <span class="place-category-ribbon">Eco-Tourism · Mangroves</span>
     </div>
@@ -1603,9 +1629,10 @@
   <!-- Gulf of Mannar Marine National Park -->
   <div class="place-card">
     <div class="place-img-wrap">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Gulf_of_Mannar_coral_reef.jpg/1280px-Gulf_of_Mannar_coral_reef.jpg"
-           alt="Gulf of Mannar coral reef" class="place-img"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <iframe
+           src="https://maps.google.com/maps?q=Gulf+of+Mannar+Marine+National+Park&t=&z=15&ie=UTF8&iwloc=&output=embed"
+           class="place-img" style="border:0;" allowfullscreen="" loading="lazy"
+           referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#006064,#00838f)">🐠</div>
       <span class="place-category-ribbon">Marine National Park</span>
     </div>
