@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Guest Guide — Ramanathapuram</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;500;600&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8D08A;
+    --gold-pale: #F5EDD0;
+    --deep: #1A1208;
+    --dark: #2A1F0E;
+    --cream: #FBF6EC;
+    --text: #3D2B0F;
+    --muted: #7A6448;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ===== VG LOGO IN HERO ===== */
+  .hero-logo-wrap {
+    margin-bottom: 1.6rem;
+    margin-top: -1.8rem;   /* pull up toward ornament line */
+  }
+  .hero-vg-logo {
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 2px 22px rgba(201,168,76,0.5));
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background: var(--deep);
+    gap: 0;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 30%, rgba(201,168,76,0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 80% at 20% 80%, rgba(201,168,76,0.08) 0%, transparent 60%),
+      linear-gradient(160deg, #0D0B07 0%, #1A1208 40%, #211709 100%);
+  }
+
+  .hero-ornament {
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, var(--gold));
+    opacity: 0.6;
+  }
+
+  .hero-ornament-bottom {
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 80px;
+    background: linear-gradient(to top, transparent, var(--gold));
+    opacity: 0.6;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    padding-top: 64px;   /* clears the 60px ornament line */
+    animation: fadeUp 1.2s ease both;
+  }
+
+  .hero-badge {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+    opacity: 0.9;
+  }
+
+  .hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.2rem, 6vw, 5rem);
+    color: #FAF0DC;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 0.4rem;
+    text-shadow: 0 2px 40px rgba(201,168,76,0.25);
+  }
+
+  .hero-title span {
+    color: var(--gold);
+    display: block;
+    font-size: 0.55em;
+    letter-spacing: 0.12em;
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .hero-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.6rem auto;
+  }
+
+  .hero-divider-line {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold));
+  }
+  .hero-divider-line.rev {
+    background: linear-gradient(to left, transparent, var(--gold));
+  }
+  .hero-divider-diamond {
+    width: 6px; height: 6px;
+    background: var(--gold);
+    transform: rotate(45deg);
+  }
+
+  .hero-subtitle {
+    color: rgba(250,240,220,0.65);
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    font-weight: 300;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+    color: var(--gold-light);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    animation: bob 2s ease-in-out infinite;
+  }
+
+  .hero-scroll::after {
+    content: '';
+    width: 1px; height: 36px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+  }
+
+  /* ===== NAV TABS ===== */
+  .tabs-wrap {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--deep);
+    border-bottom: 1px solid rgba(201,168,76,0.25);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .tabs-wrap::-webkit-scrollbar { display: none; }
+
+  .tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .tab-btn {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(250,240,220,0.5);
+    background: none;
+    border: none;
+    padding: 1rem 1.4rem;
+    cursor: pointer;
+    transition: color 0.3s, border-color 0.3s;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    position: relative;
+    top: 1px;
+  }
+
+  .tab-btn:hover { color: var(--gold-light); }
+  .tab-btn.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
+  /* ===== SECTIONS ===== */
+  .section {
+    display: none;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+    animation: fadeUp 0.5s ease both;
+  }
+  .section.active { display: block; }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .section-eyebrow {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+  }
+
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    color: var(--dark);
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+  }
+
+  .section-desc {
+    color: var(--muted);
+    max-width: 540px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+  }
+
+  /* ===== RESTAURANT CARDS ===== */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 2rem;
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 2px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(42,31,14,0.14);
+  }
+
+  .card-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--gold);
+    color: #fff;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.7rem;
+    border-radius: 1px;
+    z-index: 2;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+  }
+
+  .card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    background: #e8dcc8;
+    position: relative;
+  }
+
+  .card-img-placeholder {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    background: linear-gradient(135deg, #F5EDD0 0%, #E8D08A 100%);
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .card-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.05rem;
+    color: var(--dark);
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+  }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .card-stars {
+    color: var(--gold);
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  .card-tag {
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border: 1px solid rgba(201,168,76,0.35);
+    padding: 0.15rem 0.5rem;
+    border-radius: 1px;
+  }
+
+  .card-desc {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+    line-height: 1.65;
+  }
+
+  .card-review {
+    background: var(--gold-pale);
+    border-left: 3px solid var(--gold);
+    padding: 0.7rem 0.9rem;
+    font-style: italic;
+    font-size: 0.82rem;
+    color: var(--text);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.97rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  .card-info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .card-info-icon {
+    width: 14px;
+    flex-shrink: 0;
+    margin-top: 0.1em;
+    opacity: 0.7;
+  }
+
+  /* ===== PLACE CARDS ===== */
+  .place-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 1px solid rgba(201,168,76,0.2);
+    margin-bottom: 2.5rem;
+    background: #fff;
+    transition: box-shadow 0.3s;
+    overflow: hidden;
+  }
+
+  .place-card:hover {
+    box-shadow: 0 12px 40px rgba(42,31,14,0.12);
+  }
+
+  .place-card.reverse { direction: rtl; }
+  .place-card.reverse > * { direction: ltr; }
+
+  .place-img-wrap {
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+  }
+
+  .place-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .place-card:hover .place-img { transform: scale(1.04); }
+
+  .place-img-placeholder {
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    background: linear-gradient(135deg, var(--gold-pale), var(--gold-light));
+  }
+
+  .place-category-ribbon {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: var(--dark);
+    color: var(--gold);
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .place-body {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .place-eyebrow {
+    font-size: 0.62rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+  }
+
+  .place-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: var(--dark);
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  .place-distance {
+    font-size: 0.75rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+  }
+
+  .place-desc {
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+  }
+
+  .place-funfact {
+    background: var(--gold-pale);
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .place-funfact-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+  }
+
+  .place-funfact-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.97rem;
+    font-style: italic;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  .place-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  /* ===== GAME ZONE CARD ===== */
+  .game-card {
+    background: var(--deep);
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .game-card::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .game-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .game-icon {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .game-card-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    color: var(--gold-light);
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+  }
+
+  .game-card-sub {
+    font-size: 0.78rem;
+    color: rgba(250,240,220,0.45);
+    letter-spacing: 0.1em;
+  }
+
+  .games-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .game-item {
+    background: rgba(201,168,76,0.07);
+    border: 1px solid rgba(201,168,76,0.18);
+    padding: 0.7rem 1rem;
+    font-size: 0.82rem;
+    color: rgba(250,240,220,0.75);
+  }
+
+  .game-item-name {
+    font-weight: 500;
+    color: var(--gold-light);
+    margin-bottom: 0.15rem;
+    font-size: 0.85rem;
+  }
+
+  .game-item-price {
+    font-size: 0.72rem;
+    color: rgba(250,240,220,0.4);
+  }
+
+  .game-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(201,168,76,0.15);
+  }
+
+  .game-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .game-meta-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.7;
+  }
+
+  .game-meta-value {
+    font-size: 0.85rem;
+    color: rgba(250,240,220,0.7);
+  }
+
+  /* ===== WATER SPORTS ===== */
+  .water-sports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .ws-card {
+    background: linear-gradient(135deg, #0D1B2A 0%, #1A3045 100%);
+    border: 1px solid rgba(100,180,220,0.2);
+    padding: 1.5rem;
+    text-align: center;
+    color: rgba(220,240,255,0.85);
+  }
+
+  .ws-icon { font-size: 2rem; margin-bottom: 0.6rem; }
+  .ws-name { font-family: 'Cinzel', serif; font-size: 0.9rem; color: #A8D4E8; margin-bottom: 0.4rem; }
+  .ws-price { font-size: 0.8rem; color: rgba(220,240,255,0.5); }
+
+  /* ===== CATEGORY HEADERS ===== */
+  .sub-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 3rem 0 2rem;
+  }
+
+  .sub-header-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, rgba(201,168,76,0.4), transparent);
+  }
+
+  .sub-header-line.rev {
+    background: linear-gradient(to left, rgba(201,168,76,0.4), transparent);
+  }
+
+  .sub-header-text {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    white-space: nowrap;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    background: var(--deep);
+    text-align: center;
+    padding: 3rem 2rem;
+    border-top: 1px solid rgba(201,168,76,0.2);
+  }
+
+  .footer-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--gold-light);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-sub {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: rgba(250,240,220,0.3);
+    text-transform: uppercase;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes bob {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%       { transform: translateX(-50%) translateY(-6px); }
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 760px) {
+    .place-card { grid-template-columns: 1fr; }
+    .place-card.reverse { direction: ltr; }
+    .place-img-wrap { min-height: 220px; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .tabs { justify-content: flex-start; }
+    .tab-btn { padding: 1rem 1rem; }
+  }
+
+  /* Rating stars */
+  .stars { color: var(--gold); }
+
+  /* Pill tags for cuisine */
+  .cuisine-pills {
+    display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.8rem;
+  }
+  .pill {
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    padding: 0.2rem 0.65rem;
+    background: var(--gold-pale);
+    color: var(--muted);
+    border-radius: 20px;
+    text-transform: uppercase;
+  }
+
+  /* Price range */
+  .price-range {
+    font-size: 0.8rem;
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  /* Famous dishes block */
+  .dishes-block {
+    margin: 0.8rem 0 1rem;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(135deg, #fdf8ee 0%, #f9f0d8 100%);
+    border: 1px solid rgba(201,168,76,0.25);
+  }
+  .dishes-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  .dishes-list {
+    display: flex; flex-wrap: wrap; gap: 0.35rem;
+  }
+  .dish-tag {
+    font-size: 0.75rem;
+    color: var(--dark);
+    background: #fff;
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 0.2rem 0.6rem;
+    border-radius: 2px;
+  }
+  .card-img-real {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ornament"></div>
+  <div class="hero-ornament-bottom"></div>
+
+  <div class="hero-content">
+    <div class="hero-logo-wrap">
+    <svg class="hero-vg-logo" viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="vgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"   stop-color="#8C6A3A"/>
+          <stop offset="35%"  stop-color="#C9A84C"/>
+          <stop offset="60%"  stop-color="#EDD98A"/>
+          <stop offset="100%" stop-color="#9C7838"/>
+        </linearGradient>
+      </defs>
+      <text x="70" y="78"
+        text-anchor="middle"
+        font-family="'Cinzel', Georgia, serif"
+        font-size="82"
+        font-weight="600"
+        letter-spacing="4"
+        fill="url(#vgGrad)">VG</text>
+    </svg>
+    </div>
+    <p class="hero-badge">✦ Welcome to Our Wedding ✦</p>
+    <h1 class="hero-title">
+      Ramanathapuram
+      <span>A Guest's Guide to Our Sacred Land</span>
+    </h1>
+    <div class="hero-divider">
+      <span class="hero-divider-line"></span>
+      <span class="hero-divider-diamond"></span>
+      <span class="hero-divider-line rev"></span>
+    </div>
+    <p class="hero-subtitle">Discover the finest dining, ancient wonders, sacred shores &amp; festive joys of Ramnad — curated with love for our beloved guests.</p>
+  </div>
+
+  <div class="hero-scroll">Explore ↓</div>
+</section>
+
+<!-- NAVIGATION TABS -->
+<nav class="tabs-wrap">
+  <div class="tabs">
+    <button class="tab-btn active" onclick="showTab('dining')">🍽 Dining</button>
+    <button class="tab-btn" onclick="showTab('temples')">🛕 Temples</button>
+    <button class="tab-btn" onclick="showTab('historic')">🏛 Historic</button>
+    <button class="tab-btn" onclick="showTab('beaches')">🌊 Beaches</button>
+    <button class="tab-btn" onclick="showTab('nature')">🦜 Nature</button>
+    <button class="tab-btn" onclick="showTab('games')">🎮 Games & Fun</button>
+  </div>
+</nav>
+
+<!-- ===== DINING SECTION ===== -->
+<section id="dining" class="section active">
+  <div class="section-header">
+    <p class="section-eyebrow">Curated for our guests</p>
+    <h2 class="section-title">Finest Dining in Ramanathapuram</h2>
+    <p class="section-desc">From aromatic Chettinad feasts to fresh coastal seafood — savour the rich culinary heritage of Ramnad.</p>
+  </div>
+
+  <!-- VEG -->
+  <div class="sub-header">
+    <span class="sub-header-line rev"></span>
+    <span class="sub-header-text">🌿 Vegetarian Restaurants</span>
+    <span class="sub-header-line"></span>
+  </div>
+
+  <div class="cards-grid">
+
+    <!-- VEG 1 -->
+    <div class="card">
+      <span class="card-badge">Pure Veg</span>
+      <img class="card-img-real" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/1280px-A_small_cup_of_coffee.JPG"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+        alt="Hotel Tamil Nadu" style="display:none">
+      <div class="card-img-placeholder" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9)">🌿</div>
+      <div class="card-body">
+        <h3 class="card-name">Hotel Tamil Nadu (TTDC)</h3>
+        <div class="card-meta">
+          <span class="stars">★★★★☆</span>
+          <span class="card-tag">Pure Veg</span>
+          <span class="card-tag">Multi-Cuisine</span>
+        </div>
+        <div class="cuisine-pills">
+          <span class="pill">South Indian</span><span class="pill">Thali</span><span class="pill">Breakfast</span>
+        </div>
+        <p class="card-desc">The government-operated TTDC property is beloved for authentic Tamil vegetarian meals. Clean, spacious, pilgrim-friendly — an institution in Ramanathapuram for pure veg dining.</p>
+        <div class="dishes-block">
+          <p class="dishes-label">✦ Famous Dishes to Try</p>
+          <div class="dishes-list">
+            <span class="dish-tag">🍚 Tamil Thali Meals</span>
+            <span class="dish-tag">🫓 Idli Sambar</span>
+            <span class="dish-tag">🥞 Masala Dosa</span>
+            <span class="dish-tag">🍮 Pongal</span>
+            <span class="dish-tag">🥣 Ven Pongal</span>
+            <span class="dish-tag">🍬 Kesari</span>
+          </div>
+        </div>
+        <div class="card-review">"Superior food for all vegetarian religious travellers. Nice owner who meets guests heartily." — Guest Review</div>
+        <div class="card-info">
+          <div class="card-info-row"><span>📍</span><span>Near Rameswaram, Ramanathapuram District</span></div>
+          <div class="card-info-row"><span>🕐</span><span>7:00 AM – 10:00 PM daily</span></div>
+          <div class="card-info-row"><span>💰</span><span class="price-range">₹100 – ₹350 per person</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VEG 2 -->
+    <div class="card">
+      <span class="card-badge">Pure Veg</span>
+      <div class="card-img-placeholder" style="background:linear-gradient(135deg,#fff8e1,#ffe082)">🪷</div>
+      <div class="card-body">
+        <h3 class="card-name">Akshaya Bhavan</h3>
+        <div class="card-meta">
+          <span class="stars">★★★★☆</span>
+          <span class="card-tag">Pure Veg</span>
+          <span class="card-tag">Local Favourite</span>
+        </div>
+        <div class="cuisine-pills">
+          <span class="pill">Tamil Meals</span><span class="pill">Tiffin</span><span class="pill">Sweets</span>
+        </div>
+        <p class="card-desc">A popular local restaurant in Ramanathapuram town known for excellent food and friendly service. Perfect for a traditional sit-down Tamil meal experience.</p>
+        <div class="dishes-block">
+          <p class="dishes-label">✦ Famous Dishes to Try</p>
+          <div class="dishes-list">
+            <span class="dish-tag">🥗 Meals with Kuzhambu</span>
+            <span class="dish-tag">🫓 Onion Uthappam</span>
+            <span class="dish-tag">🍩 Vada</span>
+            <span class="dish-tag">🍛 Sambar Rice</span>
+            <span class="dish-tag">🧁 Halwa</span>
+            <span class="dish-tag">☕ Filter Coffee</span>
+          </div>
+        </div>
+        <div class="card-review">"Excellent food and warm, friendly service — a true community favourite." — WanderLog</div>
+        <div class="card-info">
+          <div class="card-info-row"><span>📍</span><span>Near KVB Bank, Bharathi Nagar, Ramanathapuram 623504</span></div>
+          <div class="card-info-row"><span>🕐</span><span>6:30 AM – 10:30 PM</span></div>
+          <div class="card-info-row"><span>💰</span><span class="price-range">₹80 – ₹250 per person</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VEG 3 -->
+    <div class="card">
+      <span class="card-badge">⭐ Top Rated</span>
+      <div class="card-img-placeholder" style="background:linear-gradient(135deg,#fce4ec,#f48fb1)">🌸</div>
+      <div class="card-body">
+        <h3 class="card-name">Ahaan — The Restaurant</h3>
+        <div class="card-meta">
+          <span class="stars">★★★★★</span>
+          <span class="card-tag">Fine Dining</span>
+          <span class="card-tag">4.8 / 5 · 2000+ reviews</span>
+        </div>
+        <div class="cuisine-pills">
+          <span class="pill">Indian</span><span class="pill">Asian</span><span class="pill">Veg Friendly</span>
+        </div>
+        <p class="card-desc">The district's highest-rated restaurant near Rameswaram. Elegant interiors, diverse menu, and impeccable service — perfect for special family occasions.</p>
+        <div class="dishes-block">
+          <p class="dishes-label">✦ Famous Dishes to Try</p>
+          <div class="dishes-list">
+            <span class="dish-tag">🧆 Paneer Butter Masala</span>
+            <span class="dish-tag">🍛 Dal Makhani</span>
+            <span class="dish-tag">🥘 Veg Biryani</span>
+            <span class="dish-tag">🍞 Garlic Naan</span>
+            <span class="dish-tag">🥗 Mixed Veg Curry</span>
+            <span class="dish-tag">🍮 Gulab Jamun</span>
+          </div>
+        </div>
+        <div class="card-review">"The best restaurant experience in Rameswaram — outstanding food and warm hospitality." — TripAdvisor, 2025</div>
+        <div class="card-info">
+          <div class="card-info-row"><span>📍</span><span>Rameswaram, ~39 km from Ramanathapuram</span></div>
+          <div class="card-info-row"><span>🕐</span><span>Open all day</span></div>
+          <div class="card-info-row"><span>💰</span><span class="price-range">₹300 – ₹700 per person</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VEG 4 -->
+    <div class="card">
+      <span class="card-badge">Pure Veg</span>
+      <div class="card-img-placeholder" style="background:linear-gradient(135deg,#e8f5e9,#a5d6a7)">🍃</div>
+      <div class="card-body">
+        <h3 class="card-name">Hotel Chola</h3>
+        <div class="card-meta">
+          <span class="stars">★★★★☆</span>
+          <span class="card-tag">Veg & Non-Veg</span>
+          <span class="card-tag">Hidden Gem</span>
+        </div>
+        <div class="cuisine-pills">
+          <span class="pill">Tamil</span><span class="pill">Seafood</span><span class="pill">Meals</span>
+        </div>
+        <p class="card-desc">A deceptively spacious restaurant with an AC hall. The veg meals are particularly impressive — neat dining, excellent ambience, and polite service at great prices.</p>
+        <div class="dishes-block">
+          <p class="dishes-label">✦ Famous Dishes to Try</p>
+          <div class="dishes-list">
+            <span class="dish-tag">🍚 Mini Meals (Thali)</span>
+            <span class="dish-tag">🌶 Kothu Parotta (Veg)</span>
+            <span class="dish-tag">🧀 Egg Curry</span>
+            <span class="dish-tag">🥞 Poori Masala</span>
+            <span class="dish-tag">🥗 Rasam Rice</span>
+            <span class="dish-tag">🍦 Ice Cream Dessert</span>
+          </div>
+        </div>
+        <div class="card-review">"Hidden gem — spacious AC hall, impressive veg meals, wide variety under one roof." — WanderLog</div>
+        <div class="card-info">
+          <div class="card-info-row"><span>📍</span><span>9R7P+M33, Chalai Bazar, Ramanathapuram 623504</span></div>
+          <div class="card-info-row"><span>💰</span><span class="price-range">₹120 – ₹350 per person</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- NON-VEG -->
+  <div class="sub-header">
+    <span class="sub-header-line rev"></span>
+    <span class="sub-header-text">🍗 Non-Vegetarian Restaurants</span>
+    <span class="sub-header-line"></span>
+  </div>
+
+  <div class="cards-grid">
+
+    <!-- NON-VEG 1 -->
+    <div class="card">
+      <span class="card-badge">⭐ 5 Star</span>
+      <div class="card-img-placeholder" style="background:linear-gradient(135deg,#3e2723,#6d4c41)">🦞</div>
+      <div class="card-body">
+        <h3 class="card-name">Azimah Diner Restaurant</h3>
+        <div class="card-meta">
+          <span class="stars">★★★★★</span>
+          <span class="card-tag">Non-Veg</span>
+          <span class="card-tag">Top Choice</span>
+        </div>
+        <div class="cuisine-pills">
+          <span class="pill">Mandi</span><span class="pill">Biryani</span><span class="pill">Seafood</span><span class="pill">Chinese</span>
+        </div>
+        <p class="card-desc">Rated 5 stars — one of Ramanathapuram's finest non-veg destinations. Excellent quantity, well-trained staff, comfortable AC first floor seating.</p>
+        <div class="dishes-block">
+          <p class="dishes-label">✦ Famous Dishes to Try</p>
+          <div class="dishes-list">
+            <span class="dish-tag">🍗 Dragon Chicken</span>
+            <span class="dish-tag">🥩 Chicken Mandi</span>
+            <span class="dish-tag">🐟 Fish Fingers</span>
+            <span class="dish-tag">🦐 Prawn Masala</span>
+            <span class="dish-tag">🍜 Chicken Manchow Soup</span>
+            <span class="dish-tag">🍟 French Fries</span>
+          </div>
+        </div>
+        <div class="card-review">"Dragon chicken, chicken mandi, fish fingers — every dish was outstanding. Excellent experience!" — JustDial Review</div>
+        <div class="card-info">
+          <div class="card-info-row"><span>📍</span><span>Ramanathapuram Town</span></div>
+          <div class="card-info-row"><span>💰</span><span class="price-range">₹250 – ₹600 per person</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NON-VEG 2 -->
+    <div class="card">
+      <span class="card-badge">Non-Veg</span>
+      <div class="card-img-placeholder" style="background:linear-gradient(135deg,#bf360c,#e64a19)">🍛</div>
+      <div class="card-body">
+        <h3 class="card-name">Anifa Biriyani</h3>
+        <div class="card-meta">
+          <span class="stars">★★★★☆</span>
+          <span class="card-tag">Biryani</span>
+          <span class="card-tag">Delivery Available</span>
+        </div>
+        <div class="cuisine-pills">
+          <span class="pill">Biryani</span><span class="pill">Chicken</span><span class="pill">Mutton</span>
+        </div>
+        <p class="card-desc">Excellent variety, fresh food, quality ingredients, and great quantity at a wonderful price. A local staple for biryani lovers — fresh and worth every rupee.</p>
+        <div class="dishes-block">
+          <p class="dishes-label">✦ Famous Dishes to Try</p>
+          <div class="dishes-list">
+            <span class="dish-tag">🍚 Chicken Biryani</span>
+            <span class="dish-tag">🥩 Mutton Biryani</span>
+            <span class="dish-tag">🦐 Prawn Biryani</span>
+            <span class="dish-tag">🍗 Chicken 65</span>
+            <span class="dish-tag">🥘 Chicken Gravy</span>
+            <span class="dish-tag">🧅 Raita</span>
+          </div>
+        </div>
+        <div class="card-review">"Great place and tasty food — biryani varieties of different taste, fresh food. Worth the price!" — JustDial, 2023</div>
+        <div class="card-info">
+          <div class="card-info-row"><span>📍</span><span>Ramanathapuram Town</span></div>
+          <div class="card-info-row"><span>💰</span><span class="price-range">₹150 – ₹400 per person</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NON-VEG 3 -->
+    <div class="card">
+      <span class="card-badge">Non-Veg</span>
+      <div class="card-img-placeholder" style="background:linear-gradient(135deg,#01579b,#0288d1)">🐟</div>
+      <div class="card-body">
+        <h3 class="card-name">Ponni Mess</h3>
+        <div class="card-meta">
+          <span class="stars">★★★★☆</span>
+          <span class="card-tag">Authentic</span>
+          <span class="card-tag">Cultural Dining</span>
+        </div>
+        <div class="cuisine-pills">
+          <span class="pill">Seafood</span><span class="pill">Mutton Curry</span><span class="pill">Chettinad</span>
+        </div>
+        <p class="card-desc">12+ years of culinary experience, 30+ traditional non-veg dishes using freshly ground spices and in-house masalas. A true cultural Tamil food experience.</p>
+        <div class="dishes-block">
+          <p class="dishes-label">✦ Famous Dishes to Try</p>
+          <div class="dishes-list">
+            <span class="dish-tag">🐠 Fish Fry (Vanjaram)</span>
+            <span class="dish-tag">🦀 Crab Masala</span>
+            <span class="dish-tag">🥘 Mutton Kuzhambu</span>
+            <span class="dish-tag">🐟 Seer Fish Curry</span>
+            <span class="dish-tag">🍳 Egg Masala</span>
+            <span class="dish-tag">🍚 Fish Biryani</span>
+          </div>
+        </div>
+        <div class="card-review">"More than just food — a cultural experience reflecting Tamil Nadu's rich heritage." — Ponni Mess</div>
+        <div class="card-info">
+          <div class="card-info-row"><span>📍</span><span>Ramanathapuram</span></div>
+          <div class="card-info-row"><span>🌐</span><span>ponnimess.com</span></div>
+          <div class="card-info-row"><span>💰</span><span class="price-range">₹150 – ₹400 per person</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NON-VEG 4 -->
+    <div class="card">
+      <span class="card-badge">Chettinad</span>
+      <div class="card-img-placeholder" style="background:linear-gradient(135deg,#4a148c,#7b1fa2)">🥘</div>
+      <div class="card-body">
+        <h3 class="card-name">Nattukkottai Chettinad Mess</h3>
+        <div class="card-meta">
+          <span class="stars">★★★★☆</span>
+          <span class="card-tag">Chettinad</span>
+          <span class="card-tag">Authentic</span>
+        </div>
+        <div class="cuisine-pills">
+          <span class="pill">Chettinad</span><span class="pill">Spicy Curries</span><span class="pill">Seafood</span>
+        </div>
+        <p class="card-desc">Experience legendary Chettinad cuisine — one of India's most famous regional cuisines — with aromatic spices, slow-cooked meats, and the iconic kuzhambus of Ramnad.</p>
+        <div class="dishes-block">
+          <p class="dishes-label">✦ Famous Dishes to Try</p>
+          <div class="dishes-list">
+            <span class="dish-tag">🌶 Chettinad Chicken Curry</span>
+            <span class="dish-tag">🥩 Mutton Chukka</span>
+            <span class="dish-tag">🐟 Meen Kuzhambu</span>
+            <span class="dish-tag">🦐 Eral Thokku (Prawn)</span>
+            <span class="dish-tag">🍗 Pepper Chicken</span>
+            <span class="dish-tag">🍚 Kavuni Arisi (Black Rice Dessert)</span>
+          </div>
+        </div>
+        <div class="card-review">"Authentic non-veg food. Good quality. Must visit. Clean environment and outstanding Chettinad flavours." — TripAdvisor</div>
+        <div class="card-info">
+          <div class="card-info-row"><span>📍</span><span>Subbaiya Nagar, Pattinamkathan, Ramanathapuram 623503</span></div>
+          <div class="card-info-row"><span>💰</span><span class="price-range">₹200 – ₹500 per person</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NON-VEG 5 -->
+    <div class="card">
+      <span class="card-badge">Non-Veg</span>
+      <div class="card-img-placeholder" style="background:linear-gradient(135deg,#1a237e,#283593)">🦀</div>
+      <div class="card-body">
+        <h3 class="card-name">Bheemas Restaurant</h3>
+        <div class="card-meta">
+          <span class="stars">★★★★☆</span>
+          <span class="card-tag">Multi-Cuisine</span>
+          <span class="card-tag">Local Favourite</span>
+        </div>
+        <div class="cuisine-pills">
+          <span class="pill">Seafood</span><span class="pill">Grills</span><span class="pill">South Indian</span>
+        </div>
+        <p class="card-desc">Absolutely loved by locals — a favourite where many customers leave happy. Fresh seafood preparations and grilled items showcasing the coastal flavours of Ramanathapuram.</p>
+        <div class="dishes-block">
+          <p class="dishes-label">✦ Famous Dishes to Try</p>
+          <div class="dishes-list">
+            <span class="dish-tag">🦀 Crab Pepper Fry</span>
+            <span class="dish-tag">🐟 Grilled Seer Fish</span>
+            <span class="dish-tag">🦐 Prawn Fry</span>
+            <span class="dish-tag">🥘 Coastal Fish Curry</span>
+            <span class="dish-tag">🍗 Tandoori Chicken</span>
+            <span class="dish-tag">🍚 Prawn Biryani</span>
+          </div>
+        </div>
+        <div class="card-review">"Absolutely loved discovering this local favourite! So many customers leave happy — delicious variety." — JustDial, 2024</div>
+        <div class="card-info">
+          <div class="card-info-row"><span>📍</span><span>Ramanathapuram Town</span></div>
+          <div class="card-info-row"><span>💰</span><span class="price-range">₹200 – ₹500 per person</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== TEMPLES SECTION ===== -->
+<section id="temples" class="section">
+  <div class="section-header">
+    <p class="section-eyebrow">Sacred & Divine</p>
+    <h2 class="section-title">Temples of Ramanathapuram</h2>
+    <p class="section-desc">Where the divine meets the earthly — sacred shrines of extraordinary power, beauty, and legend.</p>
+  </div>
+
+  <!-- Ramanathaswamy Temple -->
+  <div class="place-card">
+    <div class="place-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Ramanathaswamy_Temple_Corridor.jpg/1280px-Ramanathaswamy_Temple_Corridor.jpg"
+           alt="Ramanathaswamy Temple" class="place-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="place-img-placeholder" style="display:none;">🛕</div>
+      <span class="place-category-ribbon">Jyotirlinga · Char Dham</span>
+    </div>
+    <div class="place-body">
+      <p class="place-eyebrow">✦ Rameswaram · ~55 km</p>
+      <h3 class="place-name">Arulmigu Ramanathaswamy Temple</h3>
+      <p class="place-distance">📍 Rameswaram Island · ~55 km from Ramanathapuram</p>
+      <p class="place-desc">One of India's most sacred temples and a Char Dham pilgrimage site. Dedicated to Lord Shiva, it is also one of the twelve Jyotirlinga temples. Built in the 12th century, its magnificent 1,212-metre-long corridor is the longest in any Hindu temple in the world, supported by intricately carved pillars. Here, the Vaishnava and Shaiva traditions uniquely converge.</p>
+      <div class="place-funfact">
+        <p class="place-funfact-label">✦ Fun Fact</p>
+        <p class="place-funfact-text">The temple's third corridor is the longest temple corridor in the world at 1,212 metres. Legend holds that Rama himself installed the Shivalingam here after his return from Lanka.</p>
+      </div>
+      <div class="place-details">
+        <span>🕐 Timings: 5:00 AM – 1:00 PM & 3:00 PM – 9:00 PM</span>
+        <span>📞 +91 4573 221223</span>
+        <span>🎟 Free entry (special darshan available)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Uthirakosamangai -->
+  <div class="place-card reverse">
+    <div class="place-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Uthirakosamangai_temple.jpg/800px-Uthirakosamangai_temple.jpg"
+           alt="Uthirakosamangai Temple" class="place-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#1b5e20,#388e3c)">🛕</div>
+      <span class="place-category-ribbon">Ancient · Emerald Deity</span>
+    </div>
+    <div class="place-body">
+      <p class="place-eyebrow">✦ Uthirakosamangai · 18 km</p>
+      <h3 class="place-name">Mangalanatha Swamy Temple</h3>
+      <p class="place-distance">📍 Uthirakosamangai · 18 km from Ramanathapuram</p>
+      <p class="place-desc">An ancient Shiva temple where the presiding deity is famously carved in precious Emerald — one of the rarest and most revered idol materials in Tamil Nadu. The temple is considered one of the most sacred Shaivite shrines in the region, drawing devotees and scholars alike.</p>
+      <div class="place-funfact">
+        <p class="place-funfact-label">✦ Fun Fact</p>
+        <p class="place-funfact-text">The Shivalinga here is made entirely of naturally occurring Emerald — extremely rare in temple iconography. The idol is believed to have been worshipped continuously for over 2,000 years.</p>
+      </div>
+      <div class="place-details">
+        <span>📍 18 km from Ramanathapuram (via NH 87)</span>
+        <span>🕐 Open morning & evening sessions</span>
+        <span>🎟 Free entry</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Devipattinam Navagraha Temple -->
+  <div class="place-card">
+    <div class="place-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Navapashanam_Stones_in_the_Sea%2C_Devipattinam%2C_Tamil_Nadu.jpg/1280px-Navapashanam_Stones_in_the_Sea%2C_Devipattinam%2C_Tamil_Nadu.jpg"
+           alt="Devipattinam Navagraha stones in sea" class="place-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#01579b,#0288d1)">🌊</div>
+      <span class="place-category-ribbon">Navagraha · Coastal Temple</span>
+    </div>
+    <div class="place-body">
+      <p class="place-eyebrow">✦ Devipattinam · ~15 km</p>
+      <h3 class="place-name">Navagraha Temple, Devipattinam</h3>
+      <p class="place-distance">📍 Devipattinam (Navashashanam) · ~15 km from Ramanathapuram</p>
+      <p class="place-desc">A coastal village temple of extraordinary significance — Lord Rama is believed to have worshipped the nine Navagraha (planetary deities) here. Nine stones in the sea represent the nine planets, and devotees wade into the shallow waves to offer prayers. A deeply moving and unique spiritual experience.</p>
+      <div class="place-funfact">
+        <p class="place-funfact-label">✦ Fun Fact</p>
+        <p class="place-funfact-text">Nine stone idols placed in the sea at Devipattinam represent the nine planets of the Hindu cosmos. Worshipping here is believed to remove the ill effects of all planetary positions in one's horoscope.</p>
+      </div>
+      <div class="place-details">
+        <span>📍 Near the coastline, Devipattinam</span>
+        <span>🕐 Open all day</span>
+        <span>🎟 Free entry</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thiruppullani -->
+  <div class="place-card reverse">
+    <div class="place-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Thiruppullani_Temple.jpg/800px-Thiruppullani_Temple.jpg"
+           alt="Thiruppullani Temple" class="place-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#880e4f,#c2185b)">🌺</div>
+      <span class="place-category-ribbon">Vishnu Temple · Ramayana</span>
+    </div>
+    <div class="place-body">
+      <p class="place-eyebrow">✦ Thiruppullani · ~12 km</p>
+      <h3 class="place-name">Sri Adi Jagannatha Perumal Temple</h3>
+      <p class="place-distance">📍 Thiruppullani · ~12 km from Ramanathapuram</p>
+      <p class="place-desc">One of the Divya Desams — 108 sacred Vishnu temples celebrated by the Alvars. Legend holds that Lord Rama fasted and prayed here on a bed of kusha grass to appease the Sea God before building the Ram Setu bridge to Lanka. Serene, ancient, and connected to the very soul of the Ramayana.</p>
+      <div class="place-funfact">
+        <p class="place-funfact-label">✦ Fun Fact</p>
+        <p class="place-funfact-text">The name Thiruppullani means "sacred bed of grass" — referring to Lord Rama lying on kusha grass in prayer. It is one of only a handful of temples where Vishnu is depicted in a reclining prayerful posture.</p>
+      </div>
+      <div class="place-details">
+        <span>📍 Thiruppullani, near Ramanathapuram</span>
+        <span>🕐 Morning & evening sessions</span>
+        <span>🎟 Free entry</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== HISTORIC SECTION ===== -->
+<section id="historic" class="section">
+  <div class="section-header">
+    <p class="section-eyebrow">Heritage & History</p>
+    <h2 class="section-title">Historical Landmarks</h2>
+    <p class="section-desc">Walk through centuries of royal splendour, legendary bridges, and the birthplace of a visionary.</p>
+  </div>
+
+  <!-- Palace -->
+  <div class="place-card">
+    <div class="place-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Ramalingavilasam_palace.jpg/1280px-Ramalingavilasam_palace.jpg"
+           alt="Ramalingavilasam Palace" class="place-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="place-img-placeholder" style="display:none;">🏛</div>
+      <span class="place-category-ribbon">Palace · Museum</span>
+    </div>
+    <div class="place-body">
+      <p class="place-eyebrow">✦ Ramanathapuram Town · 2 km</p>
+      <h3 class="place-name">Ramalingavilasam Palace</h3>
+      <p class="place-distance">📍 Ramanathapuram Town · 2 km from town centre</p>
+      <p class="place-desc">Built in the 17th century by Kizhavan Sethupathi — the most celebrated among the Sethupathi kings — this grand palace is a treasure trove of Indo-Sarcenic architecture. Its Durbar Hall dazzles with ancient murals painted in natural dyes depicting Ramayana scenes, battles with the Marathas, and royal lifestyle of the Sethupathis. A museum houses swords, daggers, guns, iron spears, boomerangs, and excavations from Alagankulam.</p>
+      <div class="place-funfact">
+        <p class="place-funfact-label">✦ Fun Fact</p>
+        <p class="place-funfact-text">Veerapandiya Kattabomman, the legendary Tamil chieftain who defied the British, met the Sethupathi ruler right here in this Durbar Hall. Secret underground passages (now sealed) once connected the palace to unknown destinations.</p>
+      </div>
+      <div class="place-details">
+        <span>📍 Ramalingavilasam, Ramanathapuram 623504</span>
+        <span>🕐 10:00 AM – 5:00 PM (Closed Fridays)</span>
+        <span>🎟 Nominal entry fee</span>
+        <span>🏛 State Archaeological Department</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pamban Bridge -->
+  <div class="place-card reverse">
+    <div class="place-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Pamban_bridge.jpg/1280px-Pamban_bridge.jpg"
+           alt="Pamban Bridge" class="place-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="place-img-placeholder" style="display:none;">🌉</div>
+      <span class="place-category-ribbon">Engineering Marvel</span>
+    </div>
+    <div class="place-body">
+      <p class="place-eyebrow">✦ Pamban · ~30 km</p>
+      <h3 class="place-name">Pamban Bridge</h3>
+      <p class="place-distance">📍 Pamban, Rameswaram Island · ~30 km</p>
+      <p class="place-desc">India's first sea bridge and one of the most spectacular engineering achievements of the colonial era. The 2.2 km cantilever bridge connects Rameswaram island to the Indian mainland over the Palk Strait. The bascule section opens to allow ships through — watching a train crawl across the sea is a truly unforgettable sight.</p>
+      <div class="place-funfact">
+        <p class="place-funfact-label">✦ Fun Fact</p>
+        <p class="place-funfact-text">Built in 1914, Pamban Bridge was India's longest sea bridge for over 80 years. The new cable-stayed Pamban Rail Bridge, currently being completed nearby, will be India's first vertical lift sea bridge.</p>
+      </div>
+      <div class="place-details">
+        <span>📍 Rameswaram Island connecting point</span>
+        <span>🕐 Best viewed at sunrise / dusk</span>
+        <span>🎟 Free to view from road; train journey recommended</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- APJ Abdul Kalam Memorial -->
+  <div class="place-card">
+    <div class="place-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/APJ_Abdul_Kalam_Memorial_Rameswaram.jpg/1280px-APJ_Abdul_Kalam_Memorial_Rameswaram.jpg"
+           alt="APJ Abdul Kalam Memorial" class="place-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#263238,#37474f)">🚀</div>
+      <span class="place-category-ribbon">Memorial · National Icon</span>
+    </div>
+    <div class="place-body">
+      <p class="place-eyebrow">✦ Rameswaram · ~55 km</p>
+      <h3 class="place-name">Dr. APJ Abdul Kalam Memorial</h3>
+      <p class="place-distance">📍 Pei Karumbu, Rameswaram · ~55 km</p>
+      <p class="place-desc">The final resting place and memorial of India's beloved "Missile Man" and 11th President — Dr. A.P.J. Abdul Kalam. Born and raised in Rameswaram, Kalam went on to lead India's space and defence programmes before serving as President. The memorial showcases his life, achievements, and inspiring legacy through personal artefacts and photographs.</p>
+      <div class="place-funfact">
+        <p class="place-funfact-label">✦ Fun Fact</p>
+        <p class="place-funfact-text">Dr. Kalam used to collect and sell newspapers as a young boy in these very streets to support his family. He passed away at the age of 83 while delivering a lecture — teaching till his very last breath.</p>
+      </div>
+      <div class="place-details">
+        <span>📍 Pei Karumbu, Rameswaram (near Dhanushkodi road)</span>
+        <span>🕐 9:00 AM – 6:00 PM (Closed Mondays)</span>
+        <span>🎟 Free entry</span>
+        <span>📞 +91 4573 221150</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dhanushkodi Ruins -->
+  <div class="place-card reverse">
+    <div class="place-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Dhanushkodi_Town.jpg/1280px-Dhanushkodi_Town.jpg"
+           alt="Dhanushkodi ghost town ruins" class="place-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="place-img-placeholder" style="display:none;">🏚</div>
+      <span class="place-category-ribbon">Ghost Town · Historical</span>
+    </div>
+    <div class="place-body">
+      <p class="place-eyebrow">✦ Dhanushkodi · ~65 km</p>
+      <h3 class="place-name">Dhanushkodi — The Ghost Town</h3>
+      <p class="place-distance">📍 Southernmost tip of Rameswaram Island · ~65 km</p>
+      <p class="place-desc">Once a thriving port town at the confluence of the Bay of Bengal and the Indian Ocean, Dhanushkodi was completely washed away in the devastating 1964 cyclone. Today, its haunting church ruins, railway station skeleton, and abandoned homes stand as a silent memorial to nature's fury. The sacred Kothandaramasamy Temple — where Vibhishana surrendered before Rama — remains miraculously intact.</p>
+      <div class="place-funfact">
+        <p class="place-funfact-label">✦ Fun Fact</p>
+        <p class="place-funfact-text">On 22 December 1964, a category-5 cyclone with 280 km/h winds hit Dhanushkodi, killing over 1,800 people including all 115 passengers of the Pamban Express train that was washed into the sea.</p>
+      </div>
+      <div class="place-details">
+        <span>📍 18 km from Rameswaram (rough road — 4WD/jeep recommended)</span>
+        <span>🕐 Sunrise to Sunset</span>
+        <span>🎟 Free entry · Jeep safari available ₹200–₹400</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== BEACHES SECTION ===== -->
+<section id="beaches" class="section">
+  <div class="section-header">
+    <p class="section-eyebrow">Shores of Serenity</p>
+    <h2 class="section-title">Beaches & Hidden Coves</h2>
+    <p class="section-desc">Where the Indian Ocean meets the Bay of Bengal — some of India's most pristine and sacred shores.</p>
+  </div>
+
+  <!-- Ariyaman Beach -->
+  <div class="place-card">
+    <div class="place-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Ariyaman_beach.jpg/1280px-Ariyaman_beach.jpg"
+           alt="Ariyaman Beach" class="place-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="place-img-placeholder" style="display:none;">🏖</div>
+      <span class="place-category-ribbon">Government Beach · Water Sports</span>
+    </div>
+    <div class="place-body">
+      <p class="place-eyebrow">✦ Ariyaman · ~12 km</p>
+      <h3 class="place-name">Ariyaman Beach (Kushi Beach)</h3>
+      <p class="place-distance">📍 Sattakkonvalasai, Ramanathapuram · ~12 km</p>
+      <p class="place-desc">A government-maintained, family-friendly beach stretching 2 km along the Palk Bay with golden sands and calm, shallow waters. Lined with casuarina trees, it offers excellent water sports including jet skiing, banana boat rides, and parasailing. A watchtower offers panoramic views — gorgeous at sunrise and sunset.</p>
+      <div class="place-funfact">
+        <p class="place-funfact-label">✦ Fun Fact</p>
+        <p class="place-funfact-text">The beach is 150 metres wide with exceptionally shallow, calm waters — safe even for children and non-swimmers. The casuarina grove behind it is one of the densest in Tamil Nadu's coast.</p>
+      </div>
+      <div class="place-details">
+        <span>📍 Sattakkonvalasai, ~12 km from Ramanathapuram</span>
+        <span>🕐 Open all day · Best: 6 AM–9 AM and 4 PM–6 PM</span>
+        <span>🏄 Water sports: Jet ski ₹300, Banana boat ₹150/person</span>
+        <span>🎟 Entry: Free · Parking available</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Agni Theertham -->
+  <div class="place-card reverse">
+    <div class="place-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Agni_Theertham_Rameswaram.jpg/1280px-Agni_Theertham_Rameswaram.jpg"
+           alt="Agni Theertham Rameswaram" class="place-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#e65100,#ff8f00)">🌅</div>
+      <span class="place-category-ribbon">Sacred Beach · Pilgrimage</span>
+    </div>
+    <div class="place-body">
+      <p class="place-eyebrow">✦ Rameswaram · ~55 km</p>
+      <h3 class="place-name">Agni Theertham Beach</h3>
+      <p class="place-distance">📍 Near Ramanathaswamy Temple, Rameswaram · ~55 km</p>
+      <p class="place-desc">The most sacred of Rameswaram's 64 theerthas (holy water bodies) and one of the most spiritually charged beaches in India. Pilgrims take ritual baths in the sea before entering the Ramanathaswamy Temple. The sight of thousands of devotees in white, wading into the ocean at dawn, is profoundly moving and uniquely Indian.</p>
+      <div class="place-funfact">
+        <p class="place-funfact-label">✦ Fun Fact</p>
+        <p class="place-funfact-text">It is believed that bathing in Agni Theertham absolves one of all sins. The name "Agni" (fire) is said to refer to the spiritual fire that burns away karma in these sacred waters.</p>
+      </div>
+      <div class="place-details">
+        <span>📍 Right next to Ramanathaswamy Temple</span>
+        <span>🕐 Open all day</span>
+        <span>🎟 Free entry</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kunthukal Beach (Hidden) -->
+  <div class="place-card">
+    <div class="place-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Kunthukal_Beach_Rameswaram.jpg/1280px-Kunthukal_Beach_Rameswaram.jpg"
+           alt="Kunthukal Beach" class="place-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#004d40,#00695c)">🌴</div>
+      <span class="place-category-ribbon">Hidden Beach · Serene</span>
+    </div>
+    <div class="place-body">
+      <p class="place-eyebrow">✦ Hidden Gem · Rameswaram · ~50 km</p>
+      <h3 class="place-name">Kunthukal Beach</h3>
+      <p class="place-distance">📍 Outskirts of Rameswaram · ~50 km from Ramanathapuram</p>
+      <p class="place-desc">A hidden treasure away from the crowds, Kunthukal Beach is known for its tranquil ambience, gentle waves, and soft sands. Surrounded by palm trees and rocky outcrops, this virtually undiscovered beach is perfect for peaceful reflection, intimate walks, and exploring tidal pools. Located near the Vivekananda Memorial.</p>
+      <div class="place-funfact">
+        <p class="place-funfact-label">✦ Fun Fact</p>
+        <p class="place-funfact-text">Very few tourists venture here — making it feel like a private beach discovery. The shallow tidal pools at low tide reveal remarkable marine life including starfish, sea urchins, and colourful sea anemones.</p>
+      </div>
+      <div class="place-details">
+        <span>📍 Near Vivekananda Memorial, outskirts of Rameswaram</span>
+        <span>🕐 Open all day · Best at low tide</span>
+        <span>🎟 Free · Limited facilities — carry water and snacks</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Olaikuda Beach (Hidden) -->
+  <div class="place-card reverse">
+    <div class="place-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Rameswaram_beach.jpg/1280px-Rameswaram_beach.jpg"
+           alt="Olaikuda Beach Rameswaram" class="place-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#006064,#00838f)">🐚</div>
+      <span class="place-category-ribbon">Hidden · Untouched</span>
+    </div>
+    <div class="place-body">
+      <p class="place-eyebrow">✦ Secret Beach · ~48 km</p>
+      <h3 class="place-name">Olaikuda Beach</h3>
+      <p class="place-distance">📍 Near Rameswaram · ~48 km from Ramanathapuram</p>
+      <p class="place-desc">A lesser-known gem offering a peaceful retreat away from the crowds. The calm waters and soft sands make it perfect for relaxation and photography. This relatively untouched beach gives it a raw, natural charm — no souvenir stalls, no noise, just the pure coast. Excellent for birdwatching during the migratory season (October–February).</p>
+      <div class="place-funfact">
+        <p class="place-funfact-label">✦ Fun Fact</p>
+        <p class="place-funfact-text">During winter months, rare migratory seabirds including flamingoes from Siberia and painted storks from Southeast Asia can be spotted along the quieter stretches of Ramanathapuram's coast.</p>
+      </div>
+      <div class="place-details">
+        <span>📍 Near Rameswaram outskirts (ask locals for directions)</span>
+        <span>🕐 Best at sunrise · very low footfall</span>
+        <span>🎟 Free · Completely natural, no amenities</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pamban Beach -->
+  <div class="place-card">
+    <div class="place-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Pamban_Bridge_view_from_below.jpg/1280px-Pamban_Bridge_view_from_below.jpg"
+           alt="Pamban Beach and Bridge" class="place-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#1a237e,#1565c0)">🌉</div>
+      <span class="place-category-ribbon">Scenic · Photography</span>
+    </div>
+    <div class="place-body">
+      <p class="place-eyebrow">✦ Pamban · ~30 km</p>
+      <h3 class="place-name">Pamban Beach</h3>
+      <p class="place-distance">📍 Near Pamban Bridge, Rameswaram · ~30 km</p>
+      <p class="place-desc">Located right under the iconic Pamban Bridge, this beach offers one of the most spectacular views in Tamil Nadu — trains passing overhead across the sea. The picturesque waters, panoramic bridge views, and relative quiet make it a paradise for photographers and couples seeking something truly extraordinary.</p>
+      <div class="place-funfact">
+        <p class="place-funfact-label">✦ Fun Fact</p>
+        <p class="place-funfact-text">This is one of the only places in India where you can sit on a beach and watch a train pass directly above you over the open sea — a photograph that stops scroll every time.</p>
+      </div>
+      <div class="place-details">
+        <span>📍 Below Pamban Bridge, Pamban town</span>
+        <span>🕐 Open all day · Best around train timings</span>
+        <span>🎟 Free</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== NATURE SECTION ===== -->
+<section id="nature" class="section">
+  <div class="section-header">
+    <p class="section-eyebrow">Wild & Wonderful</p>
+    <h2 class="section-title">Nature, Birds & Marine Life</h2>
+    <p class="section-desc">Internationally recognised wetlands, vibrant bird colonies, and mystical mangrove forests.</p>
+  </div>
+
+  <!-- Chitrangudi Bird Sanctuary -->
+  <div class="place-card">
+    <div class="place-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Spot-billed_Pelican_%28Pelecanus_philippensis%29_in_Ramanathapuram_District_W_IMG_9031.jpg/1280px-Spot-billed_Pelican_%28Pelecanus_philippensis%29_in_Ramanathapuram_District_W_IMG_9031.jpg"
+           alt="Spot-billed Pelican Chitrangudi" class="place-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#1b5e20,#2e7d32)">🦩</div>
+      <span class="place-category-ribbon">Ramsar Site · Bird Sanctuary</span>
+    </div>
+    <div class="place-body">
+      <p class="place-eyebrow">✦ Chitrangudi · ~10 km</p>
+      <h3 class="place-name">Chitrangudi Bird Sanctuary</h3>
+      <p class="place-distance">📍 Chitrangudi village, Mudukulathur Taluk · ~10 km</p>
+      <p class="place-desc">A protected wetland and officially designated Ramsar site since 2021 — one of Tamil Nadu's most important nesting grounds for migratory herons, egrets, and wading birds. The babul tree plantation creates a magical canopy where spot-billed pelicans, Asian open-bill storks, grey herons, purple herons, and little egrets nest in spectacular numbers.</p>
+      <div class="place-funfact">
+        <p class="place-funfact-label">✦ Fun Fact</p>
+        <p class="place-funfact-text">Chitrangudi and Kanjirankulam together form one of India's most significant Important Bird Areas (IBA Code: IN261). The spot-billed pelican, a near-threatened species, nests here every winter in large colonies.</p>
+      </div>
+      <div class="place-details">
+        <span>📍 Chitrangudi village, ~10 km from Ramanathapuram</span>
+        <span>🕐 Best: October – February (nesting season)</span>
+        <span>🌿 Ramsar Wetland · Protected Area since 1989</span>
+        <span>🎟 Small entry fee · Binoculars recommended</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Karangadu Mangrove Forest -->
+  <div class="place-card reverse">
+    <div class="place-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Mangrove_forest.jpg/1280px-Mangrove_forest.jpg"
+           alt="Mangrove Forest" class="place-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#004d40,#00695c)">🌿</div>
+      <span class="place-category-ribbon">Eco-Tourism · Mangroves</span>
+    </div>
+    <div class="place-body">
+      <p class="place-eyebrow">✦ Karangadu · ~15 km</p>
+      <h3 class="place-name">Karangadu Mangrove Forest & Boating</h3>
+      <p class="place-distance">📍 Karangadu, near Ramanathapuram · ~15 km</p>
+      <p class="place-desc">An enchanting boat ride through dense mangrove channels — one of the best ecotourism experiences in the district. The forest is a critical marine nursery and carbon sink. Government-operated boats weave through the green tunnel of mangrove roots, revealing crabs, fish, and coastal birds in their natural habitat.</p>
+      <div class="place-funfact">
+        <p class="place-funfact-label">✦ Fun Fact</p>
+        <p class="place-funfact-text">Mangroves are considered the "kidneys of the coast" — filtering pollutants and protecting coastlines from tsunamis. Ramanathapuram's mangroves helped shield coastal villages from the 2004 tsunami's full force.</p>
+      </div>
+      <div class="place-details">
+        <span>📍 Karangadu, ~15 km from Ramanathapuram</span>
+        <span>🕐 Morning and evening boat rides available</span>
+        <span>🚤 Boating: ₹50–₹100 per person</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gulf of Mannar Marine National Park -->
+  <div class="place-card">
+    <div class="place-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Gulf_of_Mannar_coral_reef.jpg/1280px-Gulf_of_Mannar_coral_reef.jpg"
+           alt="Gulf of Mannar coral reef" class="place-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="place-img-placeholder" style="display:none;background:linear-gradient(135deg,#006064,#00838f)">🐠</div>
+      <span class="place-category-ribbon">Marine National Park</span>
+    </div>
+    <div class="place-body">
+      <p class="place-eyebrow">✦ Gulf of Mannar · Rameswaram area</p>
+      <h3 class="place-name">Gulf of Mannar Biosphere Reserve</h3>
+      <p class="place-distance">📍 Gulf of Mannar waters, accessible via Rameswaram & Tuticorin</p>
+      <p class="place-desc">India's first marine biosphere reserve and a UNESCO-listed site of extraordinary biodiversity. Home to dugongs (sea cows), dolphins, sea turtles, 3,600 species of plants and animals, and stunning coral reefs. Snorkelling and glass-bottom boat tours offer windows into this underwater paradise.</p>
+      <div class="place-funfact">
+        <p class="place-funfact-label">✦ Fun Fact</p>
+        <p class="place-funfact-text">The Gulf of Mannar is one of the world's 18 "Hottest Biodiversity Hotspots". It harbours the last viable wild population of the dugong — the real-life inspiration for the mermaid legend — in Indian waters.</p>
+      </div>
+      <div class="place-details">
+        <span>📍 Accessible via boat from Rameswaram</span>
+        <span>🤿 Snorkelling & glass-bottom boats available</span>
+        <span>🎟 Boat trips: ₹200–₹500 per person</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Water Sports Box -->
+  <div style="margin-top: 3rem;">
+    <div class="sub-header">
+      <span class="sub-header-line rev"></span>
+      <span class="sub-header-text">🤿 Water Sports at Ariyaman Beach</span>
+      <span class="sub-header-line"></span>
+    </div>
+    <div class="water-sports-grid">
+      <div class="ws-card">
+        <div class="ws-icon">🛥</div>
+        <div class="ws-name">Jet Skiing</div>
+        <div class="ws-price">₹300 / 10 min · 1 person</div>
+      </div>
+      <div class="ws-card">
+        <div class="ws-icon">🍌</div>
+        <div class="ws-name">Banana Boat Ride</div>
+        <div class="ws-price">₹150 / person · 6–8 people</div>
+      </div>
+      <div class="ws-card">
+        <div class="ws-icon">🪂</div>
+        <div class="ws-name">Parasailing</div>
+        <div class="ws-price">₹500–₹800 / person</div>
+      </div>
+      <div class="ws-card">
+        <div class="ws-icon">🚤</div>
+        <div class="ws-name">Speed Boat Ride</div>
+        <div class="ws-price">₹200 / person · group rides</div>
+      </div>
+      <div class="ws-card">
+        <div class="ws-icon">🤿</div>
+        <div class="ws-name">Snorkelling (Gulf of Mannar)</div>
+        <div class="ws-price">₹500–₹1000 · guided session</div>
+      </div>
+      <div class="ws-card">
+        <div class="ws-icon">🦭</div>
+        <div class="ws-name">Glass-Bottom Boat</div>
+        <div class="ws-price">₹200 / person · coral viewing</div>
+      </div>
+      <div class="ws-card">
+        <div class="ws-icon">🚣</div>
+        <div class="ws-name">Mangrove Boat Tour</div>
+        <div class="ws-price">₹50–₹100 / person · Karangadu</div>
+      </div>
+      <div class="ws-card">
+        <div class="ws-icon">🏄</div>
+        <div class="ws-name">Swimming & Paddling</div>
+        <div class="ws-price">Free · Ariyaman shallow waters</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== GAMES & FUN SECTION ===== -->
+<section id="games" class="section">
+  <div class="section-header">
+    <p class="section-eyebrow">Play & Celebrate</p>
+    <h2 class="section-title">Games, Fun & Entertainment</h2>
+    <p class="section-desc">From indoor arcade arenas to open-air adventures — there is festive fun for every member of the wedding party.</p>
+  </div>
+
+  <!-- Funland -->
+  <div class="game-card">
+    <div class="game-card-header">
+      <div class="game-icon">🎮</div>
+      <div>
+        <h3 class="game-card-title">Funland Indoor Amusement Park</h3>
+        <p class="game-card-sub">Ramanathapuram Branch · Family Indoor Game Arena</p>
+      </div>
+    </div>
+    <div class="games-list">
+      <div class="game-item">
+        <div class="game-item-name">🏎 Racing Arcade</div>
+        <div class="game-item-price">₹30–₹50 / game · 1 player</div>
+      </div>
+      <div class="game-item">
+        <div class="game-item-name">🎯 Shooting Games</div>
+        <div class="game-item-price">₹30–₹50 / game · 1–2 players</div>
+      </div>
+      <div class="game-item">
+        <div class="game-item-name">🏀 Basketball Arcade</div>
+        <div class="game-item-price">₹30–₹50 / game · 1–2 players</div>
+      </div>
+      <div class="game-item">
+        <div class="game-item-name">🎳 Bowling</div>
+        <div class="game-item-price">₹50–₹70 / game per person</div>
+      </div>
+      <div class="game-item">
+        <div class="game-item-name">🥊 Boxing Punching</div>
+        <div class="game-item-price">₹30 / game · 1 player</div>
+      </div>
+      <div class="game-item">
+        <div class="game-item-name">🎠 Kiddie Rides</div>
+        <div class="game-item-price">₹20–₹30 / ride (under 12s)</div>
+      </div>
+      <div class="game-item">
+        <div class="game-item-name">🕹 Claw Machine</div>
+        <div class="game-item-price">₹30 / attempt</div>
+      </div>
+      <div class="game-item">
+        <div class="game-item-name">🎪 Toddlers Play Area</div>
+        <div class="game-item-price">₹50 / child (open-ended)</div>
+      </div>
+    </div>
+    <div class="game-meta-row">
+      <div class="game-meta-item">
+        <span class="game-meta-label">Location</span>
+        <span class="game-meta-value">Ramanathapuram Town</span>
+      </div>
+      <div class="game-meta-item">
+        <span class="game-meta-label">Timings</span>
+        <span class="game-meta-value">10:00 AM – 9:30 PM daily</span>
+      </div>
+      <div class="game-meta-item">
+        <span class="game-meta-label">Payment</span>
+        <span class="game-meta-value">Funland card (rechargeable)</span>
+      </div>
+      <div class="game-meta-item">
+        <span class="game-meta-label">AC / Indoor</span>
+        <span class="game-meta-value">Yes · Fully Air Conditioned</span>
+      </div>
+      <div class="game-meta-item">
+        <span class="game-meta-label">Best For</span>
+        <span class="game-meta-value">Families, kids, all ages</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Open-Air & Adventure Activities -->
+  <div class="game-card" style="margin-top: 2rem;">
+    <div class="game-card-header">
+      <div class="game-icon">🌊</div>
+      <div>
+        <h3 class="game-card-title">Adventure Activities — Great Outdoors</h3>
+        <p class="game-card-sub">Ariyaman Beach · Dhanushkodi · Rameswaram Waters</p>
+      </div>
+    </div>
+    <div class="games-list">
+      <div class="game-item">
+        <div class="game-item-name">🛥 Jet Ski Racing</div>
+        <div class="game-item-price">₹300 / 10 min · 1–2 riders</div>
+      </div>
+      <div class="game-item">
+        <div class="game-item-name">🪂 Parasailing</div>
+        <div class="game-item-price">₹500–₹800 / person</div>
+      </div>
+      <div class="game-item">
+        <div class="game-item-name">🍌 Banana Boat Ride</div>
+        <div class="game-item-price">₹150 / person · 6–8 people</div>
+      </div>
+      <div class="game-item">
+        <div class="game-item-name">🤿 Snorkelling Coral Reefs</div>
+        <div class="game-item-price">₹500–₹1000 · guided</div>
+      </div>
+      <div class="game-item">
+        <div class="game-item-name">🦭 Glass-Bottom Boat</div>
+        <div class="game-item-price">₹200 / person</div>
+      </div>
+      <div class="game-item">
+        <div class="game-item-name">🚗 Dhanushkodi Jeep Safari</div>
+        <div class="game-item-price">₹200–₹400 / jeep (shared)</div>
+      </div>
+      <div class="game-item">
+        <div class="game-item-name">🚤 Mangrove Speed Boat</div>
+        <div class="game-item-price">₹50–₹100 / person</div>
+      </div>
+      <div class="game-item">
+        <div class="game-item-name">📸 Sunset Photography Tour</div>
+        <div class="game-item-price">Pamban Bridge / Dhanushkodi</div>
+      </div>
+    </div>
+    <div class="game-meta-row">
+      <div class="game-meta-item">
+        <span class="game-meta-label">Primary Venue</span>
+        <span class="game-meta-value">Ariyaman Beach (12 km)</span>
+      </div>
+      <div class="game-meta-item">
+        <span class="game-meta-label">Group Size</span>
+        <span class="game-meta-value">All sizes accommodated</span>
+      </div>
+      <div class="game-meta-item">
+        <span class="game-meta-label">Best Season</span>
+        <span class="game-meta-value">October – March</span>
+      </div>
+      <div class="game-meta-item">
+        <span class="game-meta-label">Age Limit</span>
+        <span class="game-meta-value">12+ for water sports</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Train Experience -->
+  <div class="game-card" style="margin-top: 2rem;">
+    <div class="game-card-header">
+      <div class="game-icon">🚂</div>
+      <div>
+        <h3 class="game-card-title">Iconic Pamban Train Journey</h3>
+        <p class="game-card-sub">India's First Sea Bridge · An Unmissable Experience</p>
+      </div>
+    </div>
+    <p style="color: rgba(250,240,220,0.65); font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem;">
+      Board a train from Ramanathapuram or Mandapam to Rameswaram and cross the legendary Pamban Bridge over the open sea — one of the most breathtaking 5 minutes in Indian rail travel. The train creaks and sways as the blue water stretches infinitely on both sides.
+    </p>
+    <div class="game-meta-row">
+      <div class="game-meta-item">
+        <span class="game-meta-label">Route</span>
+        <span class="game-meta-value">Mandapam → Rameswaram</span>
+      </div>
+      <div class="game-meta-item">
+        <span class="game-meta-label">Ticket Price</span>
+        <span class="game-meta-value">₹15–₹50 (unreserved)</span>
+      </div>
+      <div class="game-meta-item">
+        <span class="game-meta-label">Duration on bridge</span>
+        <span class="game-meta-value">~5 minutes</span>
+      </div>
+      <div class="game-meta-item">
+        <span class="game-meta-label">Fun Factor</span>
+        <span class="game-meta-value">⭐⭐⭐⭐⭐ (unforgettable)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cricket & Sports Turf -->
+  <div class="game-card" style="margin-top: 2rem; border-color: rgba(76,175,80,0.4);">
+    <div class="game-card-header">
+      <div class="game-icon">🏏</div>
+      <div>
+        <h3 class="game-card-title" style="color:#a5d6a7;">Alfa Sports Arena — Cricket & Football Turf</h3>
+        <p class="game-card-sub">Pattinamkattan, Ramanathapuram · FIFA-Approved Turf · Rated 4.3 ★</p>
+      </div>
+    </div>
+    <p style="color:rgba(250,240,220,0.65);font-size:0.9rem;line-height:1.7;margin-bottom:1.5rem;">
+      The most popular sports turf in Ramanathapuram — a FIFA-approved ground offering box cricket and 5-vs-5 futsal. Fully floodlit for night games, making it perfect for an evening outing with wedding guests. Active tournament venue with multiple cricket events held throughout the year.
+    </p>
+    <div class="games-list">
+      <div class="game-item" style="border-color:rgba(76,175,80,0.25);">
+        <div class="game-item-name" style="color:#a5d6a7;">🏏 Box Cricket</div>
+        <div class="game-item-price">6-a-side · per-hour slot booking</div>
+      </div>
+      <div class="game-item" style="border-color:rgba(76,175,80,0.25);">
+        <div class="game-item-name" style="color:#a5d6a7;">⚽ 5v5 Futsal (Football)</div>
+        <div class="game-item-price">FIFA turf · 5 players per team</div>
+      </div>
+      <div class="game-item" style="border-color:rgba(76,175,80,0.25);">
+        <div class="game-item-name" style="color:#a5d6a7;">🏆 Turf Tournaments</div>
+        <div class="game-item-price">Mini night tournaments available</div>
+      </div>
+      <div class="game-item" style="border-color:rgba(76,175,80,0.25);">
+        <div class="game-item-name" style="color:#a5d6a7;">💡 Night Floodlit Games</div>
+        <div class="game-item-price">Open till midnight · ideal for groups</div>
+      </div>
+    </div>
+    <div class="game-meta-row" style="border-color:rgba(76,175,80,0.15);">
+      <div class="game-meta-item">
+        <span class="game-meta-label">Address</span>
+        <span class="game-meta-value">Pattinamkattan, Aadham Nagar, Ramanathapuram 623504</span>
+      </div>
+      <div class="game-meta-item">
+        <span class="game-meta-label">Timings</span>
+        <span class="game-meta-value">Morning – Midnight daily</span>
+      </div>
+      <div class="game-meta-item">
+        <span class="game-meta-label">Surface</span>
+        <span class="game-meta-value">FIFA-approved artificial turf</span>
+      </div>
+      <div class="game-meta-item">
+        <span class="game-meta-label">Booking</span>
+        <span class="game-meta-value">Playspots app · walk-in slots</span>
+      </div>
+      <div class="game-meta-item">
+        <span class="game-meta-label">Best For</span>
+        <span class="game-meta-value">Groups of 6–12 · all ages</span>
+      </div>
+      <div class="game-meta-item">
+        <span class="game-meta-label">Rating</span>
+        <span class="game-meta-value">★★★★☆ 4.3/5 · JustDial</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p class="footer-title">With love, from our hearts to yours</p>
+  <div class="hero-divider" style="margin: 1rem auto;">
+    <span class="hero-divider-line"></span>
+    <span class="hero-divider-diamond"></span>
+    <span class="hero-divider-line rev"></span>
+  </div>
+  <p class="footer-sub">Ramanathapuram · Tamil Nadu · 623501</p>
+</footer>
+
+<script>
+  function showTab(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.currentTarget.classList.add('active');
+    window.scrollTo({ top: document.querySelector('.tabs-wrap').offsetTop - 10, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
